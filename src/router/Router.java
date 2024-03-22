@@ -1,13 +1,11 @@
 package router;
 
-import config.Config;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import static config.Router.scenes;
+import static router.Config.scenes;
 
-import config.Router.AppScene;
+import router.Config.AppPage;
 
 public class Router {
     private static Router instance;
@@ -25,19 +23,26 @@ public class Router {
             }
         }
 
-        _currentScene = new Scene(scenes.get(config.Router.START_SCENE).getNode(),
-                Config.APP_WIDTH, Config.APP_HEIGHT);
+        _currentScene = new Scene(scenes.get(Config.START_SCENE).getNode(),
+                config.Config.APP_WIDTH, config.Config.APP_HEIGHT);
         stage.setScene(_currentScene);
-        stage.setTitle(Config.APP_NAME);
+        stage.setTitle(config.Config.APP_NAME);
         stage.setResizable(false);
         stage.show();
     }
 
-    public static synchronized Router createInstance(Stage stage) {
+    public static synchronized void createInstance(Stage stage) {
         if (instance == null) {
-            return new Router(stage);
+            instance = new Router(stage);
         }
+    }
+
+    public static synchronized Router getInstance() {
         return instance;
+    }
+
+    public void push(AppPage scene) {
+        _currentScene.setRoot(scenes.get(scene).getNode());
     }
 }
 
