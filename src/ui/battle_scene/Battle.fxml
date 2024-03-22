@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane alignment="TOP_RIGHT" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SubScene height="900.0" width="1600.0">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+      <ImageView fitHeight="335.0" fitWidth="1042.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_CENTER">
+         <image>
+            <Image url="@../../res/images/battle_bottom.png" />
+         </image>
+      </ImageView>
+      <Button mnemonicParsing="false" text="?">
+         <font>
+            <Font size="40.0" />
+         </font>
+         <StackPane.margin>
+            <Insets right="20.0" top="20.0" />
+         </StackPane.margin>
+      </Button>
+   </children>
+</StackPane>
