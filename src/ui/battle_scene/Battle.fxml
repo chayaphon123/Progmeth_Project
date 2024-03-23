@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane alignment="TOP_RIGHT" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane alignment="TOP_RIGHT" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.battle_scene.BattleController">
    <children>
-      <SubScene height="900.0" width="1600.0">
+      <SubScene fx:id="BattleSubScene" fill="#ff7878" height="700.0" width="1200.0" StackPane.alignment="CENTER">
         <root>
           <Region />
         </root>
@@ -21,7 +21,7 @@
             <Image url="@../../res/images/battle_bottom.png" />
          </image>
       </ImageView>
-      <Button mnemonicParsing="false" text="?">
+      <Button fx:id="howtoButton" mnemonicParsing="false" text="?">
          <font>
             <Font size="40.0" />
          </font>

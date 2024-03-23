@@ -1,5 +1,6 @@
 package router;
 
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -29,6 +30,7 @@ public class Router {
         stage.setTitle(config.Config.APP_NAME);
         stage.setResizable(false);
         stage.show();
+        Platform.runLater(() -> scenes.get(Config.START_SCENE).start());
     }
 
     public static synchronized void createInstance(Stage stage) {
@@ -43,6 +45,7 @@ public class Router {
 
     public void push(AppPage scene) {
         _currentScene.setRoot(scenes.get(scene).getNode());
+        Platform.runLater(() -> scenes.get(scene).start());
     }
 }
 

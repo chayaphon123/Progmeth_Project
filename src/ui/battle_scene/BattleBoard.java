@@ -1,6 +1,7 @@
 package ui.battle_scene;
 
 import application.Main;
+import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
 import javafx.geometry.VPos;
@@ -22,11 +23,16 @@ public class BattleBoard extends HBox {
     public BattleTeam team2 = new BattleTeam();
     public Pair<Optional<Node>, Boolean> selectedNode = new Pair<>(Optional.empty(), false);
     public BattleBoard() {
-        setSpacing(50);
         setRotationAxis(Rotate.X_AXIS);
-        setRotate(-50);
+//        setRotate(-50);
 
-//        setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(5))));
+        setTranslateX(0);
+        setTranslateY(0);
+
+        setPrefWidth(800);
+        setPrefHeight(1000);
+        setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
+        setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(5))));
 
         getChildren().add(team1);
 
@@ -38,43 +44,5 @@ public class BattleBoard extends HBox {
         getChildren().add(text);
 
         getChildren().add(team2);
-    }
-
-    public Optional<Node> getLineByMouse(MouseEvent e) {
-        for (Node node : team1.getChildren()) {
-            if (node.getBoundsInParent().contains(e.getX(), e.getY())) {
-                return Optional.of(node);
-            }
-        }
-        for (Node node : team2.getChildren()) {
-            if (node.getBoundsInParent().contains(e.getX(), e.getY())) {
-                return Optional.of(node);
-            }
-        }
-        return Optional.empty();
-    }
-
-    public Optional<Card> getCardByMouse(MouseEvent e) {
-        for (Node node : team1.getChildren()) {
-            if (node instanceof BattleLine) {
-                BattleLine line = (BattleLine) node;
-                Optional<Node> _card = line.getCardContainer().getChildren().stream().filter(card ->
-                        card.getBoundsInParent().contains(line.parentToLocal(e.getX(), e.getY()))).findAny();
-                if (_card.isPresent()) {
-                    return Optional.of((Card) _card.get());
-                }
-            }
-        }
-        for (Node node : team2.getChildren()) {
-            if (node instanceof BattleLine) {
-                BattleLine line = (BattleLine) node;
-                Optional<Node> _card = line.getCardContainer().getChildren().stream().filter(card ->
-                        card.contains(e.getX(), e.getY())).findAny();
-                if (_card.isPresent()) {
-                    return Optional.of((Card) _card.get());
-                }
-            }
-        }
-        return Optional.empty();
     }
 }

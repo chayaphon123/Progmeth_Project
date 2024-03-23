@@ -46,10 +46,15 @@ public class Card extends Pane {
             Parent parent = this.getParent();
             Parent parent1 = parent.getParent();
             Parent parent2 = parent1.getParent();
+            Parent parent3 = parent2.getParent();
+            Parent parent4 = parent3.getParent();
             Point2D p = new Point2D(e.getX(), e.getY());
             p = localToParent(p);
-            p = parent.localToParent(p);
-            p = parent1.localToParent(p);
+//            p = parent.localToParent(p);
+//            p = parent1.localToParent(p);
+//            p = parent2.localToParent(p);
+//            p = parent3.localToParent(p);
+//            p = parent4.localToParent(p);
 
             this.setTranslateX(p.getX());
             this.setTranslateY(p.getY());
