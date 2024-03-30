@@ -8,7 +8,12 @@ import javafx.scene.layout.*;
 import ui.camera.PCamera;
 import ui.common.BaseController;
 
-public class BattleController implements BaseController {
+public class BattleSceneController implements BaseController {
+    @FXML
+    private SubScene battleSubScene;
+
+    @FXML
+    private Button howtoButton;
     @Override
     public void start() {
         BattleBoard battleBoard = new BattleBoard();
@@ -17,14 +22,8 @@ public class BattleController implements BaseController {
         stackPane.setAlignment(Pos.CENTER);
 
         PCamera pCamera = new PCamera();
-        BattleSubScene.setVisible(true);
-        BattleSubScene.setCamera(pCamera);
-        BattleSubScene.setRoot(stackPane);
+        battleSubScene.setVisible(true);
+        battleSubScene.setCamera(pCamera);
+        battleSubScene.setRoot(stackPane);
     }
-    @FXML
-    private SubScene BattleSubScene;
-
-    @FXML
-    private Button howtoButton;
-
 }

@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane alignment="TOP_RIGHT" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.battle_scene.BattleController">
+<StackPane alignment="TOP_RIGHT" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.battle_scene.BattleSceneController">
    <children>
-      <SubScene fx:id="BattleSubScene" fill="#ffffff00" height="700.0" width="1200.0" StackPane.alignment="CENTER">
+      <SubScene fx:id="battleSubScene" fill="#ffffff00" height="700.0" width="1200.0" StackPane.alignment="CENTER">
         <root>
           <Region />
         </root>
