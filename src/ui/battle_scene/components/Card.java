@@ -1,24 +1,16 @@
-package ui.battle_scene;
+package ui.battle_scene.components;
 
-import application.Main;
-import com.sun.javafx.scene.PerspectiveCameraHelper;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Point2D;
-import javafx.geometry.Pos;
-import javafx.scene.CacheHint;
-import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import ui.camera.PCamera;
 
 import java.util.Optional;
-import java.util.Random;
 
 public class Card extends StackPane {
     private double cardStartX, cardStartY, cardStartZ;

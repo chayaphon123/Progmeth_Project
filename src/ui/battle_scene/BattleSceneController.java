@@ -5,6 +5,7 @@ import javafx.geometry.Pos;
 import javafx.scene.SubScene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.*;
+import ui.battle_scene.components.BattleBoard;
 import ui.camera.PCamera;
 import ui.common.BaseController;
 

@@ -1,24 +1,8 @@
-package ui.battle_scene;
+package ui.battle_scene.components;
 
-import application.Main;
-import javafx.geometry.Insets;
-import javafx.geometry.Point2D;
-import javafx.geometry.Pos;
-import javafx.geometry.VPos;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 import javafx.scene.transform.Rotate;
-import javafx.scene.input.MouseEvent;
-import javafx.util.Pair;
-import ui.camera.PCamera;
-
-import javax.swing.text.html.Option;
-import java.util.ArrayList;
-import java.util.Optional;
-import java.util.Stack;
 
 public class BattleBoard extends StackPane {
     public BattleTeam team1 = new BattleTeam();

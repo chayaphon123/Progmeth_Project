@@ -12,7 +12,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd2bb" height="150.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
       <ImageView fitHeight="164.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true" rotate="50.0" translateX="20.0" translateY="-20.0">
          <image>
-            <Image url="@../../res/images/kona_nobg.png" />
+            <Image url="@../../../res/images/kona_nobg.png" />
          </image>
          <rotationAxis>
             <Point3D x="1.0" />

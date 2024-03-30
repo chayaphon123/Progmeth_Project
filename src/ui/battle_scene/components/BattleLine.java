@@ -1,17 +1,12 @@
-package ui.battle_scene;
+package ui.battle_scene.components;
 
 import javafx.geometry.Pos;
-import javafx.scene.Group;
-import javafx.scene.Node;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.CacheHint;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import ui.battle_scene.components.Card;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 public class BattleLine extends StackPane {
