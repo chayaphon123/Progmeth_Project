@@ -12,7 +12,6 @@ public class PCamera extends PerspectiveCamera {
 
     public PCamera() {
         PerspectiveCamera _camera = new PerspectiveCamera(false);
-        _camera.isFixedEyeAtCameraZero();
         _camera.setFarClip(6000);
         _camera.setNearClip(0.01);
         _camera.getTransforms().addAll(xRotate, yRotate, zRotate);
