@@ -1,5 +1,6 @@
 package ui.battle_scene.components;
 
+import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.layout.*;
 import javafx.scene.transform.Rotate;
