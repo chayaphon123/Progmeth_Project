@@ -10,16 +10,19 @@ import javafx.scene.layout.StackPane;
 
 public class Pannel extends AnchorPane {
     private Parent _node;
+    private PannelController _controller;
     public Pannel() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Pannel.fxml"));
         try {
             _node = loader.load();
-            loader.getController();
+            _controller = loader.getController();
         } catch (Exception e) {
             e.printStackTrace();
         }
         this.getChildren().add(_node);
         this.setMaxWidth(850);
         this.setMaxHeight(900);
+
+        _controller.start();
     }
 }
