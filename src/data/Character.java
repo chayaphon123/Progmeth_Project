@@ -26,7 +26,7 @@ public class Character {
 
     public Character(String name, String imgPath, String id) {
         this.name = name;
-        this.imgPath = getClass().getResource("/res/images/" + imgPath).toString();
+        this.imgPath = getClass().getResource("/assets/images/" + imgPath).toString();
         this.img = new Image(this.imgPath);
         this.id = id;
     }
