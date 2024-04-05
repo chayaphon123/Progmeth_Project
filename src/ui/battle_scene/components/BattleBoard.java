@@ -10,6 +10,8 @@ public class BattleBoard extends StackPane {
     public BattleTeam team2 = new BattleTeam();
 
     public Group group1 = new Group();
+    private static Card selectedCard = null;
+
     public BattleBoard() {
         group1.getChildren().add(team1);
         group1.getChildren().add(team2);
@@ -22,5 +24,17 @@ public class BattleBoard extends StackPane {
         group1.prefHeight(1000);
 
         getChildren().add(group1);
+    }
+
+    public static Card getSelectedCard() {
+        return selectedCard;
+    }
+
+    public static void setSelectedCard(Card card) {
+        if (selectedCard != null) {
+            selectedCard.getController().deselect();
+        }
+        selectedCard = card;
+        selectedCard.getController().select();
     }
 }

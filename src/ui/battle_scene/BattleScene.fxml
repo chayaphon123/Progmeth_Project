@@ -20,7 +20,7 @@
             <Font size="40.0" />
          </font>
       </Button>
-      <ImageView fitHeight="335.0" fitWidth="1042.0" layoutX="279.0" layoutY="698.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="335.0" fitWidth="1042.0" layoutX="279.0" layoutY="698.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../../res/images/battle_bottom.png" />
          </image>
