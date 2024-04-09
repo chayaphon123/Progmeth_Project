@@ -1,12 +1,23 @@
 package Actions;
 
-public class NormalAction extends Action{
-    public NormalAction(String name) {
-        super(name);
-    }
+import Characters.Character;
+import Characters.Estaasp;
+import Interfaces.Attackable;
+import Players.Player;
 
-    @Override
-    void execute(Character character) {
-        //Implement Normal action logic
+public class NormalAction extends Action{
+    public NormalAction(String name, int manaCost) {
+        super(name, manaCost);
+    }
+    public void execute(Player player, Character target) {
+        if (player.consumeMana(manaCost) && name == "Balag Balag Balag!") {
+            // Implement Normal action logic
+            if (target instanceof Attackable) {
+                ((Attackable) target).receiveDamage(35);
+                if (target instanceof Poisonable && ((Poisonable) target).isPoisoned()) {
+                    ((Poisonable) target).increasePoisonLevel();
+                }
+            }
+        }
     }
 }

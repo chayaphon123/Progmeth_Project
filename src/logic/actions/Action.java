@@ -1,11 +1,18 @@
 package Actions;
 
+
+import Characters.Character;
+import Players.Player;
+
+// Action classes
 public abstract class Action {
     protected String name;
+    protected int manaCost;
 
-    public Action(String name) {
+    public Action(String name, int manaCost) {
         this.name = name;
+        this.manaCost = manaCost;
     }
 
-    abstract void execute(Character character);
+    public abstract void execute(Player player, Character target);
 }

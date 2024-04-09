@@ -1,5 +1,7 @@
 package Interfaces;
 
+import Effects.Buff;
+
 public interface Buffable {
-    void buff(int amount);
+    void applyBuff(Buff buff);
 }

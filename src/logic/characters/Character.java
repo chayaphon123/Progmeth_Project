@@ -1,38 +1,19 @@
 package Characters;
 
-import Actions.Action;
-import Interfaces.Attackable;
-import Interfaces.Buffable;
-import Interfaces.Healable;
+public abstract class Character {
 
-public abstract class Character implements Attackable, Healable, Buffable {
-    protected int hp;
-    protected int mana;
+    private int hp;
+    private int atk;
+    private int def;
+    private int mat;
+    private int mdf;
 
-    protected Action normalAction;
-
-    protected Action superAction;
-
-    public Character(int hp, int mana){
+    public Character(int hp, int atk, int def, int mat, int mdf) {
         this.hp = hp;
-        this.mana = mana;
-    }
-
-    public abstract void performAction(Action action);
-
-    public boolean isAlive(){
-        return this.hp > 0;
-    }
-
-    @Override
-    public void takeDamage(int amount) {
-        this.hp -= amount;
-        System.out.println(getClass().getSimpleName() + " took " + amount + " damage.");
-    }
-
-    @Override
-    public void heal(int amount) {
-        this.hp += amount;
+        this.atk = atk;
+        this.def = def;
+        this.mat = mat;
+        this.mdf = mdf;
     }
 
     public int getHp() {
@@ -43,28 +24,35 @@ public abstract class Character implements Attackable, Healable, Buffable {
         this.hp = hp;
     }
 
-    public int getMana() {
-        return mana;
+    public int getAtk() {
+        return atk;
     }
 
-    public void setMana(int mana) {
-        this.mana = mana;
+    public void setAtk(int atk) {
+        this.atk = atk;
     }
 
-    public Action getNormalAction() {
-        return normalAction;
+    public int getDef() {
+        return def;
     }
 
-    public void setNormalAction(Action normalAction) {
-        this.normalAction = normalAction;
+    public void setDef(int def) {
+        this.def = def;
     }
 
-    public Action getSuperAction() {
-        return superAction;
+    public int getMat() {
+        return mat;
     }
 
-    public void setSuperAction(Action superAction) {
-        this.superAction = superAction;
+    public void setMat(int mat) {
+        this.mat = mat;
+    }
+
+    public int getMdf() {
+        return mdf;
+    }
+
+    public void setMdf(int mdf) {
+        this.mdf = mdf;
     }
 }
-
